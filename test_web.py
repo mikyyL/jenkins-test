@@ -8,7 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture()
 def chromedriver():
     options = webdriver.ChromeOptions()
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options)
     return driver
